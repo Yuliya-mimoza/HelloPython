@@ -6,19 +6,9 @@
 # - 7 -> да
 # - 1 -> нет
 number = int(input("Введите число, обозначающее день недели: "))
-if number == 1:
-    print("Это понедельник")
-if number == 2:
-    print("Это вторник")
-if number == 3:
-    print("Это среда")
-if number == 4:
-    print("Это четверг")
-if number == 5:
-    print("Это пятница")
-if number == 6:
-    print("Это суббота")
-if number == 7:
-    print("Это воскресенье")
-if number < 1 or number > 7:
+if 5 >= number >= 1:
+    print("Это рабочий день")
+if 7 >= number >= 6:
+    print("Это не рабочий день")
+if number > 7 or number <= 0:
     print("Вы ввели не верное число. Введите от 1 до 7. ")
