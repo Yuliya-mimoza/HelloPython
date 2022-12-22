@@ -2,6 +2,7 @@
 # *Пример:*
 # - Для N = 5: 1, -3, 9, -27, 81
 n = int(input("Введите число: "))
+print("Для N = ",n,end=': ')
 for i in range(n):
     if i != n - 1:
         print((-3)**i, end=', ')
