@@ -26,24 +26,24 @@
 # print('Младшего из друзей зовут: ', minage['name'])
 
 
-# 3.=====вариант с одним словарём
+# 3.=====
 # Пользователь вводит число N. Затем он вводит личные данные (имя и возраст) своих N друзей.
 # Создайте список friends и добавьте в него N словарей с ключами name и age.
 # Выведите средний возраст всех друзей и самое длинное имя.
-# friends = {}
-# sumage = 0
-# srednii = 0
-# n = int(input("Введите количество друзей: "))
-# for i in range(n):
-#     name = input("Введите имя друга: ")
-#     age = int(input("Введите возраст друга: "))
-#     #friends.append(dict(name=name,age=age))
-#     friends[name] = age
-#     sumage = sumage+age
-# print(friends)
-# srednii = sumage/n
-# print('Средний возраст всех друзей = ', srednii, ' года')
-# print('Самое длинное имя =', max(friends, key=len))
+friends = []
+sumage = 0
+srednii = 0
+n = int(input("Введите количество друзей: "))
+for i in range(n):
+    name = input("Введите имя друга: ")
+    age = int(input("Введите возраст друга: "))
+    friends.append(dict(name=name, age=age))
+    sumage = sumage+age
+print(friends)
+srednii = sumage/n
+print('Средний возраст всех друзей = ', srednii, ' года')
+max_name = max(friends, key=lambda x: len(x['name']))
+print('Самое длинное имя =', max_name['name'])
 
 
 # 4.=====
@@ -70,23 +70,3 @@
 # print('Cделан такой список -', list)
 # count = len(set(list))
 # print('Количество различных элементов = ', count)
-
-
-# 3. вариант "2"===== (через N словарей с ключами name и age.)
-# Пользователь вводит число N. Затем он вводит личные данные (имя и возраст) своих N друзей.
-# Создайте список friends и добавьте в него N словарей с ключами name и age.
-# Выведите средний возраст всех друзей и самое длинное имя.
-friends = []
-sumage = 0
-srednii = 0
-n = int(input("Введите количество друзей: "))
-for i in range(n):
-    name = input("Введите имя друга: ")
-    age = int(input("Введите возраст друга: "))
-    friends.append(dict(name=name,age=age))
-    sumage = sumage+age
-print(friends)
-srednii = sumage/n
-print('Средний возраст всех друзей = ', srednii, ' года')
-#maxname=max(friends, key=lambda x: x[name])
-print('Самое длинное имя =', max_name)
