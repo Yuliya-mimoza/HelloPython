@@ -30,20 +30,20 @@
 # Пользователь вводит число N. Затем он вводит личные данные (имя и возраст) своих N друзей.
 # Создайте список friends и добавьте в него N словарей с ключами name и age.
 # Выведите средний возраст всех друзей и самое длинное имя.
-friends = []
-sumage = 0
-srednii = 0
-n = int(input("Введите количество друзей: "))
-for i in range(n):
-    name = input("Введите имя друга: ")
-    age = int(input("Введите возраст друга: "))
-    friends.append(dict(name=name, age=age))
-    sumage = sumage+age
-print(friends)
-srednii = sumage/n
-print('Средний возраст всех друзей = ', srednii, ' года')
-max_name = max(friends, key=lambda x: len(x['name']))
-print('Самое длинное имя =', max_name['name'])
+# friends = []
+# sumage = 0
+# srednii = 0
+# n = int(input("Введите количество друзей: "))
+# for i in range(n):
+#     name = input("Введите имя друга: ")
+#     age = int(input("Введите возраст друга: "))
+#     friends.append(dict(name=name, age=age))
+#     sumage = sumage+age
+# print(friends)
+# srednii = sumage/n
+# print('Средний возраст всех друзей = ', srednii, ' года')
+# max_name = max(friends, key=lambda x: len(x['name']))
+# print('Самое длинное имя =', max_name['name'])
 
 
 # 4.=====
@@ -58,6 +58,19 @@ print('Самое длинное имя =', max_name['name'])
 #     russian = input("Введите несколько его переводов на русском языке через пробел: ")
 #     dict[english] = russian.split()
 # print(dict)
+
+# 4.=====вариант преподавателя
+count = int(input())
+translate_dict = {}
+for _ in range(count):
+    eng_rus_str = input()
+    some_list = eng_rus_str.split(' - ')
+    translate_dict[some_list[0]] = some_list[1].split(', ')
+eng_word = input('Введите слово для перевода: ')
+if translate_dict.get(eng_word):
+    print(', '.join(translate_dict.get(eng_word)))
+else:
+    print('Такого слова нет')
 
 
 # 5.=====
